@@ -1,0 +1,1 @@
+./build/tests/sparsegray_test
