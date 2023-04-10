@@ -10,6 +10,6 @@ target_include_directories(sparsegray INTERFACE include)
 
 add_subdirectory(tests)
 
+add_subdirectory(dynamic_bitset)
 find_package(Boost REQUIRED)
-include_directories(dynamic_bitset)
 target_link_libraries(sparsegray INTERFACE Boost::boost)
