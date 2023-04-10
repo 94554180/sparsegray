@@ -207,9 +207,9 @@ void bitrle_encode_test()
     cout << endl << endl;
 }
 
-void gmdrle_codec_test()
+void sgf_codec_test()
 {
-    std::cout << "gmdrle_codec test" << std::endl;
+    std::cout << "sgf_codec test" << std::endl;
 
     constexpr size_t rows = 10;
     constexpr size_t cols = 10;
@@ -264,7 +264,7 @@ int main()
     GrayscaleMatrix_xor_eq_view_test();        // OK
     SubGrayscaleMatrixView_constructor_test(); //
     bitrle_encode_test();                      //
-    gmdrle_codec_test();                       //
+    sgf_codec_test();                          //
 
     return 0;
 }

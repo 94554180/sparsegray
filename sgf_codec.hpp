@@ -4,8 +4,8 @@
 #include <grayscale_mat.hpp>
 #include <vector>
 
-#ifndef GMDRLE_CODEC_HPP
-#define GMDRLE_CODEC_HPP
+#ifndef SGF_CODEC_HPP
+#define SGF_CODEC_HPP
 
 namespace sparsegray
 {
@@ -65,4 +65,4 @@ template <typename TRun, typename TSize> struct SgfDecoder
 
 } // namespace sparsegray
 
-#endif // GMDRLE_CODEC_HPP
+#endif // SGF_CODEC_HPP
