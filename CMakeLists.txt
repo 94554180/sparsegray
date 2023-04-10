@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_library(sparsegray INTERFACE)
 target_include_directories(sparsegray INTERFACE include)
 
-add_subdirectory(tests)
+add_subdirectory(test)
 
 add_subdirectory(dynamic_bitset)
 find_package(Boost REQUIRED)
