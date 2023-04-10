@@ -1,6 +1,6 @@
-#include "../include/bitrle.hpp"
-#include "../include/gray_codec.hpp"
-#include "../include/grayscale_mat.hpp"
+#include "../bitrle.hpp"
+#include "../grayscale_mat.hpp"
+#include "../sgf_codec.hpp"
 #include <boost/dynamic_bitset.hpp>
 #include <iostream>
 #include <random>

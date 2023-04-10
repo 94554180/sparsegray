@@ -1,5 +1,5 @@
-include_directories(${CMAKE_SOURCE_DIR}/include)
-include_directories("/Users/user/Construction/vcpkg/packages/boost-dynamic-bitset_arm64-osx/include/boost")
+include_directories(${CMAKE_SOURCE_DIR})
+include_directories(${CMAKE_SOURCE_DIR}/dynamic_bitset)
 
 add_executable(sparsegray_test sparsegray_test.cpp)
 target_link_libraries(sparsegray_test sparsegray)
