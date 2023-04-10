@@ -1,5 +1,6 @@
 #include <array>
 #include <bitset>
+#include <boost/dynamic_bitset.hpp>
 #include <iostream>
 #include <vector>
 
