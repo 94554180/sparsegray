@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.25.1)
+cmake_minimum_required(VERSION 3.21.1)
 project(Sparsegray)
 
 set(CMAKE_BUILD_TYPE Debug)
@@ -10,6 +10,5 @@ target_include_directories(sparsegray INTERFACE include)
 
 add_subdirectory(test)
 
-add_subdirectory(dynamic_bitset)
 find_package(Boost REQUIRED)
 target_link_libraries(sparsegray INTERFACE Boost::boost)
