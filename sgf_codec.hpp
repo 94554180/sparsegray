@@ -1,7 +1,7 @@
-#include <bitrle.hpp>
+#include "bitrle.hpp"
+#include "grayscale_mat.hpp"
 #include <bitset>
 #include <boost/dynamic_bitset.hpp>
-#include <grayscale_mat.hpp>
 #include <vector>
 
 #ifndef SGF_CODEC_HPP
