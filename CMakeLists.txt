@@ -11,4 +11,5 @@ target_include_directories(sparsegray INTERFACE include)
 add_subdirectory(test)
 
 find_package(Boost REQUIRED)
+target_include_directories(sparsegray INTERFACE ${Boost_INCLUDE_DIRS})
 target_link_libraries(sparsegray INTERFACE Boost::boost)
