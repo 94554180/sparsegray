@@ -52,14 +52,14 @@ struct GrayscaleMatrix
         size_t new_rows = rows / v_scale;
         size_t new_cols = cols / h_scale;
 
-        for (size_t r = 0; r < new_rows; ++r)
+        for (size_t row = 0; row < new_rows; ++row)
         {
-            for (size_t c = 0; c < new_cols; ++c)
+            for (size_t col = 0; col < new_cols; ++col)
             {
-                size_t src_row = r * v_scale;
-                size_t src_col = c * h_scale;
+                size_t src_row = row * v_scale;
+                size_t src_col = col * h_scale;
                 bool value = get_bit(src_row, src_col);
-                set_bit(r, c, value);
+                set_bit(row, col, value);
             }
         }
 
