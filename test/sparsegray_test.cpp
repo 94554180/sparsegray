@@ -14,7 +14,7 @@ void print_matrix(const sparsegray::GrayscaleMatrix &matrix)
     {
         for (size_t col = 0; col < matrix.cols; col++)
         {
-            bool value = matrix.get_bit(row, col);
+            bool value = matrix.get_bit(col, row);
             std::cout << (value ? "1" : "0") << " ";
         }
         std::cout << std::endl;
@@ -27,7 +27,7 @@ void print_sub_matrix(const sparsegray::SubGrayscaleMatrixView &matrix_view)
     {
         for (size_t col = 0; col < matrix_view.sub_cols; ++col)
         {
-            bool value = matrix_view.get_bit(row, col);
+            bool value = matrix_view.get_bit(col, row);
             std::cout << (value ? "1" : "0") << " ";
         }
         std::cout << "\n";
@@ -70,8 +70,8 @@ void GrayscaleMatrix_cmp_test()
 {
     cout << "GrayscaleMatrix == test" << endl;
 
-    sparsegray::GrayscaleMatrix matrix1(64, 128);
-    sparsegray::GrayscaleMatrix matrix2(64, 128);
+    sparsegray::GrayscaleMatrix matrix1(128, 64);
+    sparsegray::GrayscaleMatrix matrix2(128, 64);
 
     cout << "M_1 = M_2? " << (matrix1 == matrix2) << endl;
     cout << endl << endl;
@@ -81,7 +81,7 @@ void GrayscalMatrix_downsample_test()
 {
     cout << "GrayscaleMatrix in-situ downsampling test" << endl;
 
-    sparsegray::GrayscaleMatrix matrix(64, 128);
+    sparsegray::GrayscaleMatrix matrix(128, 64);
     const std::bitset<768> matrix_iv(
         "11111111111110101010101001000100111111111111101010101010010001001111111111111010101010100100010011111111111110"
         "10101010100100010011111111111110101010101001000100111111111111101010101010010001001111111111111010101010100100"
@@ -173,7 +173,7 @@ void bitrle_encode_test()
 {
     std::cout << "bitrle_encode test" << std::endl;
 
-    sparsegray::GrayscaleMatrix matrix(64, 128);
+    sparsegray::GrayscaleMatrix matrix(128, 64);
     const std::bitset<1536> matrix_iv(
         "11111111111110101010101001000100111111111111101010101010010001001111111111111010101010100100010011111111111110"
         "10101010100100010011111111111110101010101001000100111111111111101010101010010001001111111111111010101010100100"
@@ -222,8 +222,8 @@ void sgf_codec_test()
     {
         for (size_t col = 0; col < cols; ++col)
         {
-            frame1.set_bit(row, col, (row + col) % 2);
-            frame2.set_bit(row, col, (row + col + 1) % 2);
+            frame1.set_bit(col, row, (row + col) % 2);
+            frame2.set_bit(col, row, (row + col + 1) % 2);
         }
     }
 

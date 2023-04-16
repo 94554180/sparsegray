@@ -1,1 +1,1 @@
-./build/tests/sparsegray_test
+./build/test/sparsegray_test
