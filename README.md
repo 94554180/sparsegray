@@ -1,1 +1,1 @@
-Unfinished work towards a lossy RLE library for very small microprocessors. This library is the first evolution of such a library. Later evolutions had ought to target no-STD, and further reduce overhead.
+Unfinished work towards a lossy RLE library for very small microprocessors. This library is but an early evolution. Later evolutions had ought to target no-STD, and further reduce overhead.
